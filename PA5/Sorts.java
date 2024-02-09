@@ -41,15 +41,15 @@ public class Sorts {
      * @param start The initial index on subsection of Arraylist we want to sort
      * @param end The final index of the subsection of Arraylist we want to sort
      */
-    public void QuickSort(ArrayList<Integer> list, int start, int end) {
+    public static void quickSort(ArrayList<Integer> list, int start, int end) {
         if (start < end) {
             int pivotIndex = inPlacePartition(list, start, end, start);
             /*------------------------------
             The current array at this point
             should be added to your answer
             -------------------------------*/
-            QuickSort(list, start, pivotIndex - 1);
-            QuickSort(list, pivotIndex + 1, end);
+            quickSort(list, start, pivotIndex - 1);
+            quickSort(list, pivotIndex + 1, end);
         }
     }
 
@@ -60,7 +60,7 @@ public class Sorts {
      * @param idx1 The index of element 1
      * @param idx2  The index of element 2
      */
-    private void swap(ArrayList<Integer> arr, int idx1, int idx2) {
+    private static void swap(ArrayList<Integer> arr, int idx1, int idx2) {
         int temp = arr.get(idx1);
         arr.set(idx1, arr.get(idx2));
         arr.set(idx2, temp);
@@ -76,7 +76,7 @@ public class Sorts {
      * @param pivotIx The index desired to be the pivot
      * @return returns the correct position of the pivot
      */
-    private int inPlacePartition(ArrayList<Integer> arr, int start, int stop, int pivotIx) {
+    private static int inPlacePartition(ArrayList<Integer> arr, int start, int stop, int pivotIx) {
         int pivot = arr.get(pivotIx);
         swap(arr, pivotIx, stop);
         int middleBarrier = start;
