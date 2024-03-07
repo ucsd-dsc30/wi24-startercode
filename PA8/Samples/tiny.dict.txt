@@ -1,7 +1,0 @@
-apple
-banana
-orange
-potato
-cherry
-strawberry
-blueberry
