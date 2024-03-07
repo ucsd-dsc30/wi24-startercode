@@ -1,0 +1,3 @@
+In/Out 1 -> tiny.dict.txt
+In/Out 2 -> long.dict.txt
+In/Out 3 -> long.dict.txt
